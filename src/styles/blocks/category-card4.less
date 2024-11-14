@@ -1,0 +1,36 @@
+.category-card4 {
+    box-sizing: border-box;
+    width: 100%;
+    height: 180px;
+    padding: 30px;
+    border-radius: 20px;
+    background-color: @white;
+    transition: box-shadow 0.2s;
+    cursor: pointer;
+    &:hover {
+        box-shadow: 4px 8px 40px 0 @box-shadow;
+    }
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    &__link {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 20px;
+        text-decoration: none;
+        transition: background 0.2s;
+        cursor: pointer;
+        &:hover {
+            .category-card4__span {
+                background: @span-hover;
+            }
+        }
+    }
+    &__title  {
+        margin: 0;
+    }
+}

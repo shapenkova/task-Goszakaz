@@ -1,0 +1,37 @@
+.listing {
+    &__container {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        gap: 40px;
+        width: 100%;
+    }
+    &__item2 {
+        box-sizing: border-box;
+        display: flex;
+        width: 100%;
+        gap: 40px;
+        @media @bw1020 {
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    &__item3 {
+        box-sizing: border-box;
+        display: flex;
+        gap: 40px;
+        @media @bw1020 {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+        }
+    }
+    &__item3-box {
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+}
