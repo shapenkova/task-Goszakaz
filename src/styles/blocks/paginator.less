@@ -1,0 +1,68 @@
+.paginator {
+    box-sizing: border-box;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 334px;
+    margin: 80px auto 0;
+    gap: 20px;
+    &__list {
+        box-sizing: border-box;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        gap: 20px;
+        width: 100%;
+    }
+    &__next {
+        box-sizing: border-box;
+        display: inline-flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 10px 16px;
+        border: none;
+        border-radius: 8px;
+        background: @bg-footer;
+        color: @purple;
+        font-family: @font1;
+        font-size: 18px;
+        font-weight: @font_weight1;
+        line-height: 1.388;
+        text-align: center;
+        text-decoration: none;
+        transition: background 0.2s;
+        cursor: pointer;
+        &:hover {
+            background: @span-hover;
+        }
+    }
+    &__next-icon {
+        margin-left: 10px;
+    }
+    &__list-btn {
+        box-sizing: border-box;
+        display: inline-block;
+        padding: 0;
+        border: 1px solid transparent;
+        background: transparent;
+        color: @color-0;
+        font-family: @font1;
+        font-size: 18px;
+        font-weight: @font_weight1;
+        text-align: center;
+        text-decoration: none;
+        transition: color 0.3s;
+        cursor: pointer;
+
+        &:hover {
+            color: @purple;
+            border-bottom: 1px solid @purple;
+        }
+
+        &:nth-child(1) {
+            color: @purple;
+            border-bottom: 1px solid @purple;
+        }
+
+    }
+}

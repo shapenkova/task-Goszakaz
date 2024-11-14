@@ -6,6 +6,9 @@
         @media @bw1340 {
             max-width: 100%;
         }
+        @media @bw768 {
+            
+        }
     }
     &__title {
         margin: 0 auto 30px;
@@ -15,6 +18,10 @@
         padding: 10px 0;
         border-bottom: 1px solid @border;
         &:nth-child(3) {
+            border-bottom: none;
+        }
+
+        @media @bw1340 {
             border-bottom: none;
         }
     }
@@ -49,5 +56,16 @@
         border-radius: 20px;
         background: @white;
         padding: 40px 30px 50px;
+        @media @bw1340 {
+            padding: 50px 148px;
+        }
     } 
+    &__box {
+        box-sizing: border-box;
+        @media @bw1340 {
+            display: flex;
+            gap: 20px;
+        }
+
+    }
 }
