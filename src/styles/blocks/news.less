@@ -9,7 +9,10 @@
 
     }
     &__title {
-        margin: 0 auto 30px;
+        margin: 0 0 17px;
+        @media @bw768 {
+            margin: 0 20px 30px;
+        }
     }
     &__card {
         width: 100%;
@@ -27,6 +30,7 @@
         }
     }
     &__card-link{
+        box-sizing: border-box;
         display: flex;
         flex-direction: column;
         width: 100%;
@@ -44,6 +48,7 @@
         font-family: @font1;
         font-size: 18px;
         font-weight: @font_weight1;
+        line-height: 1.25;
         transition: color 0.2s;
     }
     &__card-time {
@@ -66,35 +71,40 @@
             padding: 0 20px;
         }
     }
-    &__box2 {
-        box-sizing: border-box;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 40px;
-        padding: 40px 30px 50px;
-        border-radius: 20px;
-        background: @white;
-        transition: box-shadow 0.2s;
-        cursor: pointer;
-        
-        &:hover {
-            box-shadow: 4px 8px 40px 0 @box-shadow;
-        }
-        @media @bw768 {
-            width: 100%;
-            border-radius: 0;
-            overflow: hidden;
-        }
-    }
     // &__box2 {
-    //     margin-top: 40px;
+    //     box-sizing: border-box;
+    //     display: flex;
+    //     align-items: center;
+    //     justify-content: center;
+    //     width: 100%;
+    //     margin-top: 28px;
+
     //     border-radius: 20px;
     //     background: @white;
-    //     padding: 40px 30px 50px;
-    //     @media @bw1340 {
-    //         padding: 50px 148px;
+    //     transition: box-shadow 0.2s;
+    //     cursor: pointer;
+        
+    //     &:hover {
+    //         box-shadow: 4px 8px 40px 0 @box-shadow;
     //     }
-    // } 
+    //     @media @bw768 {
+    //         width: 100%;
+    //         border-radius: 0;
+    //         overflow: hidden;
+    //     }
+    // }
+    &__box2 {
+        margin-top: 28px;
+        border-radius: 20px;
+        background: @white;
+        padding: 40px 30px 50px;
+        @media @bw1340 {
+            margin-top: 20px;
+            padding: 47px 148px 31px;
+        }
+        @media @bw768 {
+            padding: 47px 20px 31px;
+        }
+    } 
 
 }

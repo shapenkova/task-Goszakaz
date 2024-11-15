@@ -3,9 +3,12 @@
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
+        width: 100%;
         flex: 1;
         gap: 40px;
-        width: 100%;
+        @media @bw768 {
+            padding: 0 20px;
+        }
     }
     &__item {
         width: 100%;
@@ -15,20 +18,28 @@
         display: flex;
         width: 100%;
         gap: 40px;
+        @media @bw1340 {
+            gap: 20px;
+        }
         @media @bw1020 {
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            gap: 40px;
         }
     }
     &__item3 {
         box-sizing: border-box;
         display: flex;
         gap: 40px;
+        @media @bw1340 {
+            gap: 20px;
+        }
         @media @bw1020 {
             flex-direction: column;
             justify-content: center;
             align-items: center;
+            gap: 40px;
         }
     }
     &__item3-box {

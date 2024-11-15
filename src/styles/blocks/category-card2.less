@@ -8,6 +8,15 @@
     color: @white;
     transition: box-shadow 0.2s, background-color 0.2s, color 0.2s;
     cursor: pointer;
+    @media @bw1170 {
+        max-width: 300px;
+    }
+    @media @bw1020 {
+        max-width: 100%;
+    }
+    @media @bw768 {
+        padding: 20px 15px;
+    }
     &:hover {
         color: @black;
         background-color: @white;
@@ -19,8 +28,8 @@
         .category-card2__time {
             color: @color-coal;
         };
-        .category-card2__span {
-            background-color: @bg-footer;
+        .category-card2__btn {
+            background-color: @color-4;
             color: @purple;
         }
 
@@ -28,6 +37,9 @@
     &__title,
     &__time {
         color: @white;
+    }
+    &__title {
+        margin: 27px 0 0;
     }
     &__link {
         box-sizing: border-box;
@@ -40,5 +52,11 @@
         text-decoration: none;
         transition: background 0.2s;
         cursor: pointer;
+        @media @bw1170 {
+            gap: 139px;
+        }
+        @media @bw768 {
+            gap: 171px;
+        }
     }
 }

@@ -2,10 +2,14 @@
     position: relative;
     box-sizing: border-box;
     width: 100%;
-    max-width: 320px;
-    // padding: 40px 30px; 
+    max-width: 320px; 
+    height: 400px;
+    padding: 40px 30px;
     border-radius: 20px;
-    background-color: @purple;
+    background-image: url(../assets/images/img1.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
     color: @white;
     transition: box-shadow 0.2s, color 0.2s;
     cursor: pointer;
@@ -13,43 +17,20 @@
     @media @bw1170 {
         max-width: 300px;
     }
+    @media @bw768 {
+        max-width: 280px;
+        height: 350px;
+        padding: 20px 15px;
+    }
     &:hover {
         color: @black;
         box-shadow: 4px 8px 40px 0 @box-shadow;
-
-        // .category-card2__title{
-        //     color: @black;
-        // };
-        // .category-card2__time {
-        //     color: @color-coal;
-        // };
-        // .category-card2__span {
-        //     background-color: @bg-footer;
-        //     color: @purple;
-        // }
-
-    }
-    &__bg {
-        position: absolute;
-        top: 0;
-        left: 0;
-        right: 0;
-        bottom: 0;
-        z-index: 0;
-        background-image: url(../assets/images/img1.jpg);
-        background-size: cover;
-        background-position: center;
     }
     &__link {
-        position: absolute;
-        z-index: 10;
-        top: 0;
-        left: 0;
         box-sizing: border-box;
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin: 40px 30px; 
         width: 100%;
         max-width: 260px;
         gap: 100px;
@@ -87,10 +68,10 @@
         height: 100%;
         object-fit: cover;
     }
-    &__span {
-        background: rgba(255, 255, 255, 0.2);
+    &__btn {
+        background: @color-2;
         &:hover {
-            background: rgba(255, 255, 255, 0.4);
+            background: @color-3;
         }
     }
     &__title,
@@ -98,6 +79,6 @@
         color: @white;
     }
     &__title {
-        margin: 30px 0;
+        margin: 30px 0 0;
     }
 }
