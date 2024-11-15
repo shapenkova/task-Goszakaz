@@ -46,7 +46,7 @@
             gap: 32px;
             padding: 140px 30px 30px;
             background-color: @white;
-            transition: transform 0.4s;
+            transition: transform 0.4s ease;
             transform: translateX(-100%);
             overflow-x: hidden;
             overflow-y: auto;
@@ -67,23 +67,9 @@
         font-weight: @font_weight1;
         line-height: 1.388;
         text-decoration: none;
-        transition: color 0.3s;
+        transition: color 0.3s, transform 0.4s ease;
         cursor: pointer;
-        &:nth-child(1) {
-            color: @purple;
-            &:after {
-                content: '';
-                position: absolute;
-                left: 0;
-                right: 0;
-                bottom: 1px; 
-                height: 1px; 
-                background-color: @purple; 
-            }
-            &:hover {
-                color: @purple-hover;
-            }
-        }
+        
         @media @bw1020 {
             font-size: 16px;
             line-height: 1.375;
@@ -103,6 +89,10 @@
                 height: 1px; 
                 background-color: @purple-hover; 
             }
+
+            .page-header__phone-icon {
+                transform: scale(1.08);
+            }
         }
     }
     &__nav-span {
@@ -115,8 +105,17 @@
         z-index: 1;
         flex-shrink: 0;
         box-sizing: border-box;
-        display: flex;
+        display: inline-block;
+        width: 54px;
+        height: 56px;
         margin-top: 8px;
+        transition: transform 0.3s ease; 
+
+        &:hover {
+            .small-circle {
+                transform: translate(-12.9817px, -10.0401px); 
+            }
+        }
     }
     &__left-block-icon {
         width: 100%;
@@ -169,19 +168,7 @@
         }
     }
 }
-.page-header__left-block {
-    display: inline-block;
-    position: relative;
-    width: 54px;
-    height: 56px;
-    transition: transform 0.3s ease; 
-}
 
 .small-circle {
     transition: transform 0.3s ease; 
 }
-
-.page-header__left-block:hover .small-circle {
-    transform: translate(-12.9817px, -10.0401px); 
-}
-

@@ -16,8 +16,8 @@
 
     @media @bw768 {
         padding: 20px 15px 20px;
-        min-height: 400px;
         gap: 10px;
+        border-radius: 10px;
     }
     &__link {
         box-sizing: border-box;
@@ -29,7 +29,7 @@
         transition: background 0.2s;
         cursor: pointer;
         &:hover {
-            .category-card1__span {
+            .category-card1__btn {
                 background: @hover;
             }
         }
@@ -57,14 +57,22 @@
         }
     }
     &__desc {
+        box-sizing: border-box;
+        max-height: 100%;
         margin: 0;
         padding-right: 40px;
         color: @color-coal;
         font-family: @font1;
         font-size: 18px;
         font-weight: @font_weight1;
+        
         @media @bw768 {
             padding-right: 0;
+            display: -webkit-box;
+            -webkit-line-clamp: 7;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
         }
+
     }
 }
